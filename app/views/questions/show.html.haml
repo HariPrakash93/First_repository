@@ -6,13 +6,13 @@
 %hr
 %h4.questioncomment
   = render :partial => 'comments/index', :locals => { comments: @comments, question: @question}
-= button_to "Add comment", new_question_comment_path(@question), method: :get
+= button_to "Add comment", new_question_comment_path(@question), method: :get, class: "btn btn-primary"
 %br/
 
 %br/
 = @question.solutions.count
 = @question.model_user.anscount
-=button_to "Add solution", new_question_solution_path(@question), method: :get
+=button_to "Add solution", new_question_solution_path(@question), method: :get, class: "btn btn-primary"
 %h3.answercomment
   = render :partial => 'solutions/index', :locals => { solutions: @solutions, question: @question}
 %hr
